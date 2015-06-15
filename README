@@ -1,0 +1,19 @@
+Requirements :
+ADB
+Connected device
+
+Execute the script with the app name in argument ex :
+
+getapp fms
+data/app/com.famoco.fms-2.apk (y/n)?y
+9031 KB/s (98907 bytes in 0.010s)
+
+y- to downlonad the apk in the current directory 
+n- cancel
+
+if there are more the one app it will ask you to confirme for all of them ex:
+
+getapp famoco
+data/app/com.famoco.fms-2.apk (y/n)?n
+system/app/FamocoLauncher.apk (y/n)?n
+system/app/FamocoSettings.apk (y/n)?n

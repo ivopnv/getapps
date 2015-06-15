@@ -1,0 +1,16 @@
+#!/bin/bash
+
+declare APPS=($(adb shell pm list packages -f | grep -i $1))
+path="package:"
+
+for var in "${APPS[@]}"
+do
+	one=${var#${path}/}
+	value=${one%=*}
+
+	read -p "$value (y/n)?" CONT
+	if [ "$CONT" == "y" ]; then
+	  adb pull $value;
+	fi
+
+done
